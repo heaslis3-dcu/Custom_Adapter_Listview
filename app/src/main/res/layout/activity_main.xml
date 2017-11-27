@@ -9,7 +9,8 @@
         style="@style/OrderPrescripTextView"
         android:id="@+id/txtViewChemList"
         android:text="@string/chemist_list"
-        android:background="@color/colorTVBackground"/>
+        android:background="@color/colorTVBackground"
+        android:onClick="openChemistView"/>
 
     <TextView
         style="@style/OrderPrescripTextView"

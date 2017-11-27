@@ -16,9 +16,12 @@
 package com.example.android.flavor;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -28,6 +31,8 @@ import java.util.ArrayList;
  */
 public class ChemistView extends AppCompatActivity {
 
+    private static CharSequence mToast = "You have pressed: ";
+    private static int mDuration = Toast.LENGTH_SHORT;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,4 +60,29 @@ public class ChemistView extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.listview_flavor);
         listView.setAdapter(flavorAdapter);
     }
+
+
+
+    /*
+     * MAKE NOTE OF THIS FOR Debugging - first issue found after landscape.
+     *Citation:
+     * Code adapted from - under set-onclicklistener-with-linearlayout-imageview-textview
+     * https://stackoverflow.com/questions/29100224/
+     */
+    public void onClick(View view){
+
+//        switch(view.getId()){
+//            case R.id.list_item_icon:
+//            case R.id.version_name:
+//            case R.id.version_number:
+//            case R.id.linearLayoutID:
+                Toast toast = Toast.makeText(this, mToast, mDuration);
+                toast.show();
+//                break;
+//            default:
+//                break;
+//        }
+
+    }
+
 }

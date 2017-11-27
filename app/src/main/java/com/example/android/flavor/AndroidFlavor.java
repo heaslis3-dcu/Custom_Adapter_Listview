@@ -15,11 +15,15 @@
  */
 package com.example.android.flavor;
 
+import android.view.View;
+import android.widget.Toast;
+
 /**
  * {@link AndroidFlavor} represents a single Android platform release.
  * Each object has 3 properties: name, version number, and image resource ID.
  */
 public class AndroidFlavor {
+
 
     // Name of the Android version (e.g. Gingerbread, Honeycomb, Ice Cream Sandwich)
     private String mVersionName;
@@ -64,6 +68,7 @@ public class AndroidFlavor {
     public int getImageResourceId() {
         return mImageResourceId;
     }
+
 
 
 }

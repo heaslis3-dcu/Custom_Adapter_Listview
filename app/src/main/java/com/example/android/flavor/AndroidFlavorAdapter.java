@@ -22,6 +22,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -30,8 +31,11 @@ import java.util.ArrayList;
 * based on a data source, which is a list of {@link AndroidFlavor} objects.
 * */
 public class AndroidFlavorAdapter extends ArrayAdapter<AndroidFlavor> {
+    //Toast message
 
     private static final String LOG_TAG = AndroidFlavorAdapter.class.getSimpleName();
+
+
 
     /**
      * This is our own custom constructor (it doesn't mirror a superclass constructor).
