@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Primary Colors -->
-    <color name="colorPrimary">#6b5dba</color>
-    <color name="colorPrimaryDark">#6b5dba</color>
+    <color name="colorPrimary">#50b72d</color>
+    <color name="colorPrimaryDark">#50b72d</color>
     <color name="colorAccent">#ecf2ea</color>
 
     <color name="colorTVBackground">#50b72d</color>
     <color name="colorTextWhite">#FFFFFF</color>
     <color name="colorTextBlack">#000000</color>
 
-    <!--Set background Colors here for MainActivity-->
+    <!--Set background Colors here for ChemistView-->
     <color name="colorBackgroundPurple">#800080</color>
     <color name="colorBackgroundCyan">#00FFFF</color>
     <color name="colorBackgroundAmber">#FFB300</color>

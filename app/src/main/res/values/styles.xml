@@ -31,8 +31,10 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:textColor">@color/colorTextWhite</item>
         <item name="android:clickable">true</item>
-        <item name="android:layout_marginTop">16dp</item>
-        <item name="android:padding">16dp</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:padding">24dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>
