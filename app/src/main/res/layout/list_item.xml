@@ -24,10 +24,7 @@
     android:gravity="center_vertical"
     android:orientation="horizontal"
     android:minHeight="?android:attr/listPreferredItemHeight"
-    android:padding="16dp"
-
-
-    >
+    android:padding="16dp">
 
     <ImageView
         android:id="@+id/list_item_icon"
@@ -37,27 +34,23 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayoutID"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="vertical"
-        android:paddingLeft="16dp"
-        android:onClick="onClick"
->
+        android:paddingLeft="16dp">
 
         <TextView
             android:id="@+id/version_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            />
+/>
 
         <TextView
             android:id="@+id/version_number"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            />
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
