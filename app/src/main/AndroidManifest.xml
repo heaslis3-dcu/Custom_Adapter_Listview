@@ -36,6 +36,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+        <activity android:name=".PrescriptionOrder">
+            <!-- This adds the Up Nav Arrow -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
        <!-- <activity
             android:name="com.example.android.flavor.ChemistView"
             android:label="@string/app_name" >

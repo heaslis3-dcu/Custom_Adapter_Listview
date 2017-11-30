@@ -16,6 +16,7 @@
         style="@style/OrderPrescripTextView"
         android:id="@+id/txtViewOrderPres"
         android:text="@string/order_prescription"
-        android:background="@color/colorTVBackground"/>
+        android:background="@color/colorTVBackground"
+        android:onClick="openPrescriptionView"/>
 
 </LinearLayout>

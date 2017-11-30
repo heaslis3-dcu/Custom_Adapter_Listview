@@ -21,9 +21,28 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
     }
 
+    /**
+     *Intent -  open Chemist View
+     *
+     * Start activity
+     */
     public void openChemistView(View arg0)
     {
         Intent myIntent = new Intent(MainActivity.this, ChemistView.class);
+        //log message
+        Log.d(TAG, "Chemist list view has opened!");
+        startActivity(myIntent);
+
+    }
+
+    /**
+     *Intent -  open Perscription View
+     *
+     * Start activity
+     */
+    public void openPrescriptionView(View arg0)
+    {
+        Intent myIntent = new Intent(MainActivity.this, PrescriptionOrder.class);
         //log message
         Log.d(TAG, "Chemist list view has opened!");
         startActivity(myIntent);

@@ -79,7 +79,7 @@ public class ChemistView extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l)
             {
                 String item = androidFlavors.get(position).getVersionName();
-                Toast.makeText(getApplicationContext(), item, Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), item, Toast.LENGTH_SHORT).show();
             }
         });
     }
