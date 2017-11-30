@@ -69,7 +69,7 @@ public class ChemistView extends AppCompatActivity {
      * Code adapted from - under set-onclicklistener-with-linearlayout-imageview-textview
      * https://stackoverflow.com/questions/29100224/
      */
-    public void onClick(View view){
+   /* public void onClick(View view){
 
 //        switch(view.getId()){
 //            case R.id.list_item_icon:
@@ -83,6 +83,6 @@ public class ChemistView extends AppCompatActivity {
 //                break;
 //        }
 
-    }
+    } */
 
 }
