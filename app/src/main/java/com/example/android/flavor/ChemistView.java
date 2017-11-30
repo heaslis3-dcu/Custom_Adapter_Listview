@@ -20,6 +20,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -39,7 +40,7 @@ public class ChemistView extends AppCompatActivity {
         setContentView(R.layout.chemist_list_activ_main);
 
         // Create an ArrayList of AndroidFlavor objects
-        ArrayList<AndroidFlavor> androidFlavors = new ArrayList<AndroidFlavor>();
+        final ArrayList<AndroidFlavor> androidFlavors = new ArrayList<AndroidFlavor>();
         androidFlavors.add(new AndroidFlavor("Donut", "1.6", R.drawable.donut));
         androidFlavors.add(new AndroidFlavor("Eclair", "2.0-2.1", R.drawable.eclair));
         androidFlavors.add(new AndroidFlavor("Froyo", "2.2-2.2.3", R.drawable.froyo));
@@ -59,6 +60,28 @@ public class ChemistView extends AppCompatActivity {
         // Get a reference to the ListView, and attach the adapter to the listView.
         ListView listView = (ListView) findViewById(R.id.listview_flavor);
         listView.setAdapter(flavorAdapter);
+
+        /*
+    * Date 30/11/2017
+    * Citation - code modified from:
+    * http://www.vogella.com/tutorials/AndroidListView/article.html#exercise_listsactivity_simple
+    * Section 2.6 Listener,
+    * Section 17. Tutorial: Miscellaneous
+    */
+   /* sets listener
+    * Which re
+    *
+    * Does not require clickable or
+    */
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l)
+            {
+                String item = androidFlavors.get(position).getVersionName();
+                Toast.makeText(getApplicationContext(), item, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
 
