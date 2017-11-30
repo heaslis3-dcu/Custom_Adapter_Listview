@@ -32,8 +32,8 @@ import java.util.ArrayList;
  */
 public class ChemistView extends AppCompatActivity {
 
-    private static CharSequence mToast = "You have pressed: ";
-    private static int mDuration = Toast.LENGTH_SHORT;
+//    private static CharSequence mToast = "You have pressed: ";
+//    private static int mDuration = Toast.LENGTH_SHORT;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
