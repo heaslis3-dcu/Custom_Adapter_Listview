@@ -71,13 +71,26 @@ public class ChemistView extends AppCompatActivity
 
 //        ListView lv = getListView();
 //        lv.setTextFilterEnabled(true);
-    //This returns the number in the arraylist.
+        /*
+         * Date 30/11/2017
+         * Citation - code modified from:
+         * http://www.vogella.com/tutorials/AndroidListView/article.html#exercise_listsactivity_simple
+         * Section 2.6 Listener,
+         * Se
+         * Section 17. Tutorial: Miscellaneous
+         */
+        /* sets listener
+         * Which re
+         *
+         * Does not require clickable or
+         */
      listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
      {
          @Override
-         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l)
+         public void onItemClick(AdapterView<?> adapterView, View view, int position, long l)
          {
-             Toast.makeText(getApplicationContext(), "Click ListItem Number " + i, Toast.LENGTH_SHORT).show();
+             //String item = androidFlavors.get(position).getVersionName();
+             Toast.makeText(getApplicationContext(), androidFlavors.get(position).getVersionName(), Toast.LENGTH_SHORT).show();
          }
      });
     }
