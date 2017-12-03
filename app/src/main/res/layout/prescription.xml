@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edtTextTo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Name"
+        android:hint="@string/Prescription_Name"
         android:padding="16dp"/>
 
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="247dp">
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -25,7 +26,10 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/donut"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:onClick="onClickTakePhoto"
+        android:contentDescription=""
+        tools:ignore="ContentDescription"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -39,16 +43,15 @@
 </RelativeLayout>
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/edTxtDescription"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:ems="10"
         android:inputType="textMultiLine"
         android:hint="@string/optional_Instructions"
         android:padding="16dp"
         android:maxLength="200"
         android:layout_weight="1"
-        android:layout_below="@id/textView2"
         android:gravity="bottom"/>
 
     <TableRow
@@ -65,10 +68,7 @@
             android:ems="10"
             android:text="@string/collection_time_hours"
             android:padding="16dp"
-            android:layout_below="@id/editText3"
-            android:layout_weight="2"
-
-            />
+            android:layout_weight="2"/>
 
         <Spinner
             android:id="@+id/spinner2"
@@ -76,19 +76,16 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="16dp"
-            android:layout_below="@id/editText3"
-            android:layout_toRightOf="@id/editText4"/>
+            />
     </TableRow>
+
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editText4"
-        android:layout_centerHorizontal="true"
+        android:onClick="openEmail"
         android:padding="16dp"
-        android:text="@string/send_order"
-
-        />
+        android:text="@string/send_order"/>
 
 
 </LinearLayout>
