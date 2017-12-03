@@ -26,4 +26,13 @@
     <string name="ToEmail">chemist@dcu.ie</string>
     <string name="FromEmail">colette.kirwan@dcu.ie</string>
     <string name="Prescription_Name">Enter Name Here</string>
+    <string-array name="collectionTimes">
+        <item>.....</item>
+        <item>1 Hr</item>
+        <item>3 Hr</item>
+        <item>6Hr</item>
+        <item>12 Hr</item>
+        <item>24 Hr</item>
+        <item>48 Hr</item>
+    </string-array>
 </resources>
