@@ -27,7 +27,7 @@
     <string name="FromEmail">colette.kirwan@dcu.ie</string>
     <string name="Prescription_Name">Enter Name Here</string>
     <string-array name="collectionTimes">
-        <item>.....</item>
+        <item>...</item>
         <item>1 Hr</item>
         <item>3 Hr</item>
         <item>6Hr</item>
