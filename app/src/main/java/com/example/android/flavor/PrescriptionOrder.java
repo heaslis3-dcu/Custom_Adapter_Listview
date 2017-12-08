@@ -184,6 +184,7 @@ public class PrescriptionOrder extends AppCompatActivity
                 " " + edtTxt_OtherInstruc.getText().toString() +
                 "\n\n" + emailRegards + " " + edtText_Name.getText().toString()
         );
+        openEmailIntent.putExtra(Intent.EXTRA_STREAM,m_ImageUri);
         //Adding for additional instructions. If populated or not
 //        if(edtTxt_OtherInstruc.getText().toString() == ""){
 //            openEmailIntent.putExtra(Intent.EXTRA_TEXT, "\n");
