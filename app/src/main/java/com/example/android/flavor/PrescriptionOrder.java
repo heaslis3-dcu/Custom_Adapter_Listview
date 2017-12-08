@@ -129,6 +129,7 @@ public class PrescriptionOrder extends AppCompatActivity
     public void openEmail(View view) {
         //Test Toast to confirm Imagefilepath working
         //Toast.makeText(this, "ImageFilePath is: " + m_ImageFile, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "ImageFilePath is: " + m_ImageUri, Toast.LENGTH_LONG).show();
         //Toast.makeText(this, "Spinner: " + m_SpinnerStr, Toast.LENGTH_SHORT).show();
         //Toast.makeText(this, "Subject: " + edtText_To.getText().toString(), Toast.LENGTH_SHORT).show();
        // Toast.makeText(this, "Opening Email", Toast.LENGTH_SHORT).show();
