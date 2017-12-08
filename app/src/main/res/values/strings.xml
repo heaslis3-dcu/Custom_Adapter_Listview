@@ -23,16 +23,20 @@
     <string name="collection_time_hours">Collection Time (Hours)</string>
     <string name="title_activity_prescription__layout">Prescription_Layout</string>
     <string name="Email_Subject">Prescription Request</string>
-    <string name="ToEmail">chemist@dcu.ie</string>
     <string name="FromEmail">colette.kirwan@dcu.ie</string>
     <string name="Prescription_Name">Enter Name Here</string>
+    <string name="Msg_Subject">Prescription request</string>
+    <string name="ToEmail">chemist@dcu.ie</string>
+    <string name="Msg_Name">Name:</string>
+    <string name="Msg_Part1">Please find my prescription attached. I will collect it in</string>
+    <string name="Msg_Part2">time.</string>
+    <string name="Msg_Part3">Regards:</string>
+    <!--String Array for Spinner-->
     <string-array name="collectionTimes">
         <item>...</item>
         <item>1 Hr</item>
         <item>3 Hr</item>
-        <item>6Hr</item>
         <item>12 Hr</item>
-        <item>24 Hr</item>
         <item>48 Hr</item>
     </string-array>
 </resources>
