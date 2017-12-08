@@ -68,7 +68,9 @@
             android:padding="8dp"
             android:text="@string/collection_time_hours"
             />
-
+<!-- TO DO look into using drawable image to format the SPINNER
+ https://stackoverflow.com/questions/16694786/how-to-customize-a-spinner-in-android
+-->
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="wrap_content"

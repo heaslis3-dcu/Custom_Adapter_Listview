@@ -30,7 +30,7 @@
     <string name="Msg_Name">Name:</string>
     <string name="Msg_Part1">Please find my prescription attached. I will collect it in</string>
     <string name="Msg_Part2">time.</string>
-    <string name="Msg_Part3">Regards:</string>
+    <string name="Msg_Part3">Kind regards,:</string>
     <!--String Array for Spinner-->
     <string-array name="collectionTimes">
         <item>...</item>
