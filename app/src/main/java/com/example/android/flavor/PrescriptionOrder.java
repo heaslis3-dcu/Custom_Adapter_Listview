@@ -36,7 +36,7 @@ public class PrescriptionOrder extends AppCompatActivity
     private String imageFileName = "myImage.jpg";
     private Spinner m_SpinnerClick;
     private TextView mSpinnerTxtV;
-    private EditText edtText_Name, edtTxt_OtherInstruc;
+    private EditText edtText_Name, edtTxt_OtherInstruc, edtPhoneNum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -44,19 +44,17 @@ public class PrescriptionOrder extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.prescription);
         edtText_Name = (EditText) findViewById(R.id.edtTextFrom);
-       edtTxt_OtherInstruc = (EditText)findViewById(R.id.edTxtDescription);
+        edtTxt_OtherInstruc = (EditText)findViewById(R.id.edTxtDescription);
+        edtPhoneNum =(EditText) findViewById(R.id.edtPhoneNum);
         //NOT required for retrieving data from input of userName
         //m_Message = (EditText) findViewById(R.id.edTxtDescription);
         //Initialising Strings from resource - To email address
         emailTo = getResources().getString(R.string.ToEmail);
-        //Subject
-        emailSubject = getResources().getString(R.string.Msg_Subject);
-        //Message details
-        emailName = getResources().getString(R.string.Msg_Name);
-        emailMsgPart1 = getResources().getString(R.string.Msg_Part1);
-        emailMsgPart2 = getResources().getString(R.string.Msg_Part2);
-        emailRegards = getResources().getString(R.string.Msg_Part3);
-
+        emailSubject = getResources().getString(R.string.Msg_Subject); //Subject
+        emailName = getResources().getString(R.string.Msg_Name); //Message details
+        emailMsgPart1 = getResources().getString(R.string.Msg_Part1); //Message details
+        emailMsgPart2 = getResources().getString(R.string.Msg_Part2); //Message details
+        emailRegards = getResources().getString(R.string.Msg_Part3); //Message details
         //Spinner - selection Array Adapater
         m_SpinnerClick = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this,
@@ -149,7 +147,8 @@ public class PrescriptionOrder extends AppCompatActivity
                 " " + emailMsgPart2 +
                 " " + edtTxt_OtherInstruc.getText().toString() +
                 "\n\n" + emailRegards +
-                "\n\n " + edtText_Name.getText().toString()
+                "\n\n " + edtText_Name.getText().toString() +
+                "\n\n" + edtPhoneNum.getText().toString()
         );
         openEmailIntent.putExtra(Intent.EXTRA_STREAM, m_ImageUri);
 

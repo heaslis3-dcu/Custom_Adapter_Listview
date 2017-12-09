@@ -14,17 +14,20 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="@string/Prescription_Name"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/colorTextBlack"
         android:padding="16dp"/>
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/donut"
+        app:srcCompat="@drawable/cameratrans"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:onClick="captureImage"
         android:contentDescription=""
+        android:background="@color/colorPrimary"
         android:layout_below="@id/edtTextFrom"
         tools:ignore="ContentDescription"/>
 
@@ -32,10 +35,13 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorTextWhite"
+        android:paddingBottom="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
         android:text="@string/take_photo"
-        android:layout_alignBottom="@id/imageButton"
-        android:layout_centerHorizontal="true"
-        android:padding="16dp"/>
+        android:layout_alignBottom="@+id/imageButton"
+        android:layout_centerHorizontal="true"/>
 
 
 
@@ -46,10 +52,24 @@
         android:ems="10"
         android:inputType="textMultiLine"
         android:hint="@string/optional_Instructions"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/colorTextBlack"
         android:padding="16dp"
         android:maxLength="200"
         android:maxLines="2"
         android:layout_below="@+id/imageButton"/>
+
+    <EditText
+        android:id="@+id/edtPhoneNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:inputType="phone"
+        android:hint="@string/optional_phonenumber"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/colorTextBlack"
+        android:padding="16dp"
+        android:layout_below="@id/edTxtDescription"/>
 
     <TableRow
         android:id="@+id/tableRow"
@@ -60,12 +80,15 @@
         android:layout_alignParentStart="true">
 
         <TextView
+            style="@style/OrderPrescripTextView"
             android:id="@+id/editText4"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="2"
+            android:textColor="@color/colorPrimary"
             android:ems="10"
             android:padding="8dp"
+            android:textSize="16sp"
             android:text="@string/collection_time_hours"
             />
 <!-- TO DO look into using drawable image to format the SPINNER
@@ -79,7 +102,6 @@
             android:entries="@array/collectionTimes"
             android:padding="8dp"
             android:textAlignment="center"
-            android:background="@color/colorPrimary"
             android:textColor="#FF0000"/>
     </TableRow>
 

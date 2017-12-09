@@ -19,6 +19,7 @@
     <string name="chemist_list">Chemist List</string>
     <string name="take_photo">Take Photo of Prescription</string>
     <string name="optional_Instructions">Enter other instructions (optional)</string>
+    <string name="optional_phonenumber">Enter phone number (optional)</string>
     <string name="send_order">SEND ORDER</string>
     <string name="collection_time_hours">Collection Time (Hours)</string>
     <string name="title_activity_prescription__layout">Prescription_Layout</string>
@@ -30,10 +31,11 @@
     <string name="Msg_Name">Name:</string>
     <string name="Msg_Part1">Please find my prescription attached. I will collect it in</string>
     <string name="Msg_Part2">time.</string>
-    <string name="Msg_Part3">Kind regards,:</string>
+    <string name="Msg_Part3">Kind regards,</string>
+    <string name="Msg_PhoneNum">Contact Number: </string>
     <!--String Array for Spinner-->
     <string-array name="collectionTimes">
-        <item>...</item>
+        <item></item>
         <item>1 Hr</item>
         <item>3 Hr</item>
         <item>12 Hr</item>

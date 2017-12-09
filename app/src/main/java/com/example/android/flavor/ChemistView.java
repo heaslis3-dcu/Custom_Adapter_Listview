@@ -37,10 +37,10 @@ public class ChemistView extends AppCompatActivity {
 
         // Create an ArrayList of AndroidFlavor objects
         final ArrayList<AndroidFlavor> androidFlavors = new ArrayList<AndroidFlavor>();
-        androidFlavors.add(new AndroidFlavor("Donut", "1.6", R.drawable.donut));
-        androidFlavors.add(new AndroidFlavor("Eclair", "2.0-2.1", R.drawable.eclair));
-        androidFlavors.add(new AndroidFlavor("Froyo", "2.2-2.2.3", R.drawable.froyo));
-        androidFlavors.add(new AndroidFlavor("GingerBread", "2.3-2.3.7", R.drawable.gingerbread));
+        androidFlavors.add(new AndroidFlavor("Cosmetics", "From €1.00!", R.drawable.cosmetics));
+        androidFlavors.add(new AndroidFlavor("Candles", "Candles on discount at 50% off!", R.drawable.candles));
+        androidFlavors.add(new AndroidFlavor("Mens", "Enjoy a selection of mens products.", R.drawable.mens));
+        androidFlavors.add(new AndroidFlavor("Lipstick", "Lipsticks on sale 25% off!", R.drawable.lipstick));
         androidFlavors.add(new AndroidFlavor("Honeycomb", "3.0-3.2.6", R.drawable.honeycomb));
         androidFlavors.add(new AndroidFlavor("Ice Cream Sandwich", "4.0-4.0.4", R.drawable.icecream));
         androidFlavors.add(new AndroidFlavor("Jelly Bean", "4.1-4.3.1", R.drawable.jellybean));
