@@ -41,12 +41,12 @@ public class ChemistView extends AppCompatActivity {
         androidFlavors.add(new AndroidFlavor("Candles", "Candles on discount at 50% off!", R.drawable.candles));
         androidFlavors.add(new AndroidFlavor("Mens", "Enjoy a selection of mens products.", R.drawable.mens));
         androidFlavors.add(new AndroidFlavor("Lipstick", "Lipsticks on sale 25% off!", R.drawable.lipstick));
-        androidFlavors.add(new AndroidFlavor("Honeycomb", "3.0-3.2.6", R.drawable.honeycomb));
-        androidFlavors.add(new AndroidFlavor("Ice Cream Sandwich", "4.0-4.0.4", R.drawable.icecream));
-        androidFlavors.add(new AndroidFlavor("Jelly Bean", "4.1-4.3.1", R.drawable.jellybean));
-        androidFlavors.add(new AndroidFlavor("KitKat", "4.4-4.4.4", R.drawable.kitkat));
-        androidFlavors.add(new AndroidFlavor("Lollipop", "5.0-5.1.1", R.drawable.lollipop));
-        androidFlavors.add(new AndroidFlavor("Marshmallow", "6.0-6.0.1", R.drawable.marshmallow));
+        androidFlavors.add(new AndroidFlavor("Meditation", "Checkout our mediation zone.", R.drawable.candles));
+        androidFlavors.add(new AndroidFlavor("Perfumes", "We have a wide range of perfumes on offer", R.drawable.cosmetics));
+        androidFlavors.add(new AndroidFlavor("Woman", "Enjoy a selection of products for her!", R.drawable.mens));
+        androidFlavors.add(new AndroidFlavor("Makeup", "Lipsticks on sale 25% off!", R.drawable.lipstick));
+        androidFlavors.add(new AndroidFlavor("Candy", "Sugar free candy", R.drawable.lollipop));
+        androidFlavors.add(new AndroidFlavor("Sweets", "Checkout our mediation zone", R.drawable.marshmallow));
 
         // Create an {@link AndroidFlavorAdapter}, whose data source is a list of
         // {@link AndroidFlavor}s. The adapter knows how to create list item views for each item

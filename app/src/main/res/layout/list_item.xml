@@ -41,12 +41,15 @@
         <TextView
             android:id="@+id/version_name"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_Padding"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/version_number"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/default_Padding"/>
 
     </LinearLayout>
 

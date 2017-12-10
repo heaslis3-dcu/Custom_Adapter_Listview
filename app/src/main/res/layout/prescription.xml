@@ -9,15 +9,9 @@
 
     <EditText
         android:id="@+id/edtTextFrom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        style="@style/styleEditText"
         android:hint="@string/Prescription_Name"
-        android:textSize="@dimen/txtsize"
-        android:inputType="textPersonName"
-        android:padding="@dimen/default_Padding"
-        android:textColor="@color/colorTextBlack"
-        android:textColorHint="@color/colorPrimary"/>
+        android:inputType="textPersonName"/>
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -47,30 +41,20 @@
 
     <EditText
         android:id="@+id/edTxtDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/styleEditText"
         android:layout_below="@+id/imageButton"
-        android:ems="10"
         android:hint="@string/optional_Instructions"
-        android:textSize="@dimen/txtsize"
         android:inputType="textMultiLine"
         android:maxLength="200"
-        android:maxLines="2"
-        android:padding="@dimen/default_Padding"
-        android:textColor="@color/colorTextBlack"
-        android:textColorHint="@color/colorPrimary"/>
+        android:maxLines="3"/>
 
     <EditText
         android:id="@+id/edtPhoneNum"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/styleEditText"
         android:layout_below="@id/edTxtDescription"
         android:hint="@string/optional_phonenumber"
-        android:textSize="@dimen/txtsize"
         android:inputType="phone"
-        android:padding="@dimen/default_Padding"
-        android:textColor="@color/colorTextBlack"
-        android:textColorHint="@color/colorPrimary"/>
+/>
 
     <TableRow
         android:id="@+id/tableRow"
@@ -82,12 +66,12 @@
 
         <TextView
             android:id="@+id/colTimeTxtView"
-            style="@style/OrderPrescripTextView"
+
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:ems="10"
-            android:padding="@dimen/minor_padding"
+            android:padding="@dimen/default_Padding"
             android:text="@string/collection_time_hours"
             android:textColor="@color/colorPrimary"
             android:textSize="@dimen/txtsize"

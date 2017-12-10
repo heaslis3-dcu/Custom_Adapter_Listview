@@ -22,7 +22,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <!-- TextView tableview-->
     <style name="OrderPrescripTextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -33,8 +33,17 @@
         <item name="android:clickable">true</item>
         <item name="android:layout_margin">@dimen/fab_margin</item>
         <item name="android:padding">24dp</item>
-        <item name="android:layout_marginLeft">@dimen/fab_margin</item>
 
+    </style>
+
+    <!--Edit Text Styles-->
+    <style name="styleEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txtsize</item>
+        <item name="android:padding">@dimen/default_Padding</item>
+        <item name="android:textColor">@color/colorTextBlack</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
     </style>
 
     <style name="TxtViewCommonStyles">

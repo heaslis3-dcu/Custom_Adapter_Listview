@@ -6,9 +6,9 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <!--Default padding-->
-    <dimen name="default_Padding">16dp</dimen>
+    <dimen name="default_Padding">12dp</dimen>
     <!--Minor padding-->
     <dimen name="minor_padding">8dp</dimen>
     <!--text size small-->
-    <dimen name="txtsize">8sp</dimen>
+    <dimen name="txtsize">12sp</dimen>
 </resources>
