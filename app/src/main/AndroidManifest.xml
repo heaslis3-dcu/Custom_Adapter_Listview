@@ -19,24 +19,30 @@
 
     <uses-feature android:name="android.hardware.camera2" />
 
-    <!--implicity requires read access
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
--->
+    <!--
+    Have removed users ability to orientate the activities screens to Landscape.
+    Did not like any of the landscape views I created and
+    researched similar apps which do not allow user to rotate the screen.
+    -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+        <!-- Activity includes screen orientation fixed to portrait -->
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+            <!-- Activity includes screen orientation fixed to portrait -->
         </activity>
-        <activity android:name=".ChemistView">
+        <activity android:name=".ChemistView"
+                  android:screenOrientation="portrait">
 
             <!-- This adds the Up Nav Arrow -->
             <meta-data

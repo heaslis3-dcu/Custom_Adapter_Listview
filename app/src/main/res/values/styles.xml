@@ -44,6 +44,7 @@
         <item name="android:padding">@dimen/default_Padding</item>
         <item name="android:textColor">@color/colorTextBlack</item>
         <item name="android:textColorHint">@color/colorPrimary</item>
+
     </style>
 
     <style name="TxtViewCommonStyles">

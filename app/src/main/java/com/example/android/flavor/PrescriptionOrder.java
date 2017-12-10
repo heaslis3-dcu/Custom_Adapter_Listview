@@ -1,5 +1,19 @@
-package com.example.android.flavor;
+/*
+* * Copyright 2013 The Android Open Source Project  *
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*     http://www.apache.org/licenses/LICENSE-2.0  *
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
 
+package com.example.android.flavor;
 
 import android.content.Intent;
 
@@ -31,6 +45,7 @@ public class PrescriptionOrder extends AppCompatActivity
     private static String emailTo, emailSubject, emailName, emailMsgPart1, emailMsgPart2, emailRegards;
     private static final String TAG = "Assign3";
     private static final int REQUEST_SHARE = 39714;
+    private static final int REQUSET_EMAIL = 1;
     private File m_ImageFile;
     private Uri m_ImageUri;
     private String imageFileName = "myImage.jpg";
@@ -38,9 +53,25 @@ public class PrescriptionOrder extends AppCompatActivity
     private TextView mSpinnerTxtV;
     private EditText edtText_Name, edtTxt_OtherInstruc, edtPhoneNum;
 
+    /*
+Citation:
+Regarding Spinner Code saved in onCreate Method adapted from:
+https://www.youtube.com/watch?v=aApS2W-j8oM (Slidenerd video 104 & 105)
+Between 27/11/2017 and 11/12/2017
+*/
+
+    /**
+     * onCreate method
+     * initialises the various EditText views and code for the Spinner Adapter,
+     * with setOnItemSelectedLister
+     *
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.prescription);
         edtText_Name = (EditText) findViewById(R.id.edtTextFrom);
@@ -61,7 +92,8 @@ public class PrescriptionOrder extends AppCompatActivity
                 R.array.collectionTimes,
                 android.R.layout.simple_spinner_dropdown_item);
         m_SpinnerClick.setAdapter(adapter);
-        //NOTE - MAY NEED TO PUT THIS OUTSIDE ONCREATE TO RETRIEVE VALUE FOR EMAIL
+        //Spinner setting on item selected listener, have tested this code both inside onCreate and outside onCreate.
+        // Both worked fine but could use guidance on which is best practice.
         m_SpinnerClick.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
         {
             //Implement OnItemSelectedListener Methods
@@ -81,23 +113,35 @@ public class PrescriptionOrder extends AppCompatActivity
         });
     }
 
-    /*
-    Citation: https://www.youtube.com/watch?v=aApS2W-j8oM (Slidenerd video 104 & 105)
-    Spinner Steps:
-    - Create the data source,
-    define the appearance layoutfile through which the adapter will put data inside the spinner
-    define what to do when the user clicks on the spinner using the OnItemSelectedListener
+    /**
+     * Citation:
+     * Between 27/11/2017 and 11/12/2017
+     * Licence include above
+     * MediaStore reference: Constants: ACTION_IMAGE_CAPTURE
+     * https://developer.android.com/reference/android/provider/MediaStore.html
+     * https://developer.android.com/reference/android/provider/MediaStore.html#ACTION_IMAGE_CAPTURE
+     * Method used to open Camera and capture image.
+     *
+     * @param view
      */
+
     public void captureImage(View view)
     {
+        Log.i(TAG, "Camera has been activated.");
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         m_ImageFile = new File(Environment.getExternalStorageDirectory(), imageFileName);
         m_ImageUri = Uri.fromFile(m_ImageFile);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, m_ImageUri);
-        Log.i(TAG, "Camera has taken image.");
         startActivityForResult(intent, REQUEST_SHARE);//note number of request_share
     }
 
+    /**
+     * Entering onActivityResult
+     *
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
 
@@ -108,7 +152,7 @@ public class PrescriptionOrder extends AppCompatActivity
             if (resultCode == RESULT_OK)
             {
                 Log.i(TAG, "Image saved to filepath.");
-                Toast.makeText(this, "ImageFilePath is: " + m_ImageFile, Toast.LENGTH_LONG).show();
+                //Toast.makeText(this, "ImageFilePath is: " + m_ImageFile, Toast.LENGTH_LONG).show();
             } else
             {
                 Toast.makeText(this, "There was an error saving your accessing your image", Toast.LENGTH_SHORT).show();
@@ -117,54 +161,58 @@ public class PrescriptionOrder extends AppCompatActivity
     }
 
     /**
-     * Citation: Code Modified from:
-     * https://stackoverflow.com/questions/13486814
+     * Method checks that name and time are entered and the prescription receipt is taken
+     * prior to allowing open Email intent proceeding. This is the minimum required information.
      *
-     * @param view
+     * @param view // open Intent email
      */
+    /*
+        code adapted from method "process"
+        Found on YouTube - SlideNerd Android Tutorials - Videos 29/30
+        https://www.youtube.com/watch?v=nj-STGrL7Zc&index=29&list=PLonJJ3BVjZW6hYgvtkaWvwAVvOFB7fkLa
 
-    public String optionalMessage(View view)
-    {
-        EditText edtTxt_OtherInstruc = (EditText) findViewById(R.id.edTxtDescription);
-        if (edtTxt_OtherInstruc.getText().toString() != "")
-        {
-            String additionalMessage = "\n\n" + edtTxt_OtherInstruc.getText().toString();
-            return additionalMessage;
-        }
-        return null;
-    }
-
+     */
     public void openEmail(View view)
     {
-        //Test Toast to confirm Imagefilepath working
-        //Toast.makeText(this, "ImageFilePath is: " + m_ImageFile, Toast.LENGTH_LONG).show();
-        Toast.makeText(this, "ImageFilePath is: " + m_ImageUri, Toast.LENGTH_LONG).show();
-        //Toast.makeText(this, "Spinner: " + m_SpinnerStr, Toast.LENGTH_SHORT).show();
-        //Toast.makeText(this, "Subject: " + edtText_To.getText().toString(), Toast.LENGTH_SHORT).show();
-        // Toast.makeText(this, "Opening Email", Toast.LENGTH_SHORT).show();
-        //Intent for requesting to send message
-        Intent openEmailIntent = new Intent(Intent.ACTION_SEND);
-        openEmailIntent.setType("image/*");
-        //Sunject Line from EditText - edtText_Subject
-        openEmailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, emailSubject);
-        // openEmailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,edtText_Name.getText().toString());
-        //Email TO: field populated by String Resource
-        openEmailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{emailTo});
-        //openEmailIntent.setType("text/html");
-        openEmailIntent.putExtra(Intent.EXTRA_TEXT,
-                emailName + " " + edtText_Name.getText().toString() +
-                        "\n\n" + emailMsgPart1 + " " +
-                        mSpinnerTxtV.getText().toString() +
-                        " " + emailMsgPart2 +
-                        " " + edtTxt_OtherInstruc.getText().toString() +
-                        "\n\n" + emailRegards +
-                        "\n\n " + edtText_Name.getText().toString() +
-                        "\n\n" + edtPhoneNum.getText().toString()
-        );
-        openEmailIntent.putExtra(Intent.EXTRA_STREAM, m_ImageUri);
-
-        openEmailIntent.setType("message/rfc822");
-
-        startActivity(openEmailIntent.createChooser(openEmailIntent, "Send Email"));
+        //If statement to prevent user opening email without first entering a name
+        if (edtText_Name.getText().toString().isEmpty())
+        {
+            Toast.makeText(this, "You must enter your NAME to proceed!", Toast.LENGTH_SHORT).show();
+            Log.i(TAG, "Name not entered.");
+        } else if (m_ImageUri == null)
+        {
+            Toast.makeText(this, "The prescription photo has not been taken!", Toast.LENGTH_SHORT).show();
+            Log.i(TAG, "Image not taken.");
+        } else if (mSpinnerTxtV.getText().toString().isEmpty())
+        {
+            Toast.makeText(this, "Oops! You forgot the collection time!", Toast.LENGTH_SHORT).show();
+            Log.i(TAG, "Collection Time not selected.");
+        } else
+        {
+            Log.i(TAG, "Entering Intent to start email activity.");
+            //Procced with Intent to open email and send details including image, From and time
+            Intent openEmailIntent = new Intent(Intent.ACTION_SEND);
+            openEmailIntent.setType("image/*"); // lets app know image will be attached
+            //Sunject Line from EditText - edtText_Subject
+            openEmailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, emailSubject);
+            //Email TO: field populated by String Resource
+            openEmailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{emailTo});
+            //openEmailIntent.setType("text/html");
+            openEmailIntent.putExtra(Intent.EXTRA_TEXT,
+                    emailName + " " + edtText_Name.getText().toString() +
+                            "\n\n" + emailMsgPart1 + " " +
+                            mSpinnerTxtV.getText().toString() +
+                            " " + emailMsgPart2 +
+                            " " + edtTxt_OtherInstruc.getText().toString() +
+                            "\n\n" + emailRegards +
+                            "\n\n " + edtText_Name.getText().toString() +
+                            "\n\n" + edtPhoneNum.getText().toString()
+            );
+            openEmailIntent.putExtra(Intent.EXTRA_STREAM, m_ImageUri);
+            //MIME allowing exchange of different types of data through email
+            openEmailIntent.setType("message/rfc822");
+            //Start Activity - open chooser to send email
+            startActivity(openEmailIntent.createChooser(openEmailIntent, "Send Email"));
+        }
     }
 }

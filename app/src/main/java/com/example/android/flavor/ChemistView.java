@@ -39,14 +39,14 @@ public class ChemistView extends AppCompatActivity {
         final ArrayList<AndroidFlavor> androidFlavors = new ArrayList<AndroidFlavor>();
         androidFlavors.add(new AndroidFlavor("Cosmetics", "From €1.00!", R.drawable.cosmetics));
         androidFlavors.add(new AndroidFlavor("Candles", "Candles on discount at 50% off!", R.drawable.candles));
+        androidFlavors.add(new AndroidFlavor("Meditation", "Checkout our mediation zone.", R.drawable.lavender));
         androidFlavors.add(new AndroidFlavor("Mens", "Enjoy a selection of mens products.", R.drawable.mens));
+        androidFlavors.add(new AndroidFlavor("Makeup", "We have a wide range of makeup on offer", R.drawable.makeup));
         androidFlavors.add(new AndroidFlavor("Lipstick", "Lipsticks on sale 25% off!", R.drawable.lipstick));
-        androidFlavors.add(new AndroidFlavor("Meditation", "Checkout our mediation zone.", R.drawable.candles));
         androidFlavors.add(new AndroidFlavor("Perfumes", "We have a wide range of perfumes on offer", R.drawable.cosmetics));
         androidFlavors.add(new AndroidFlavor("Woman", "Enjoy a selection of products for her!", R.drawable.mens));
-        androidFlavors.add(new AndroidFlavor("Makeup", "Lipsticks on sale 25% off!", R.drawable.lipstick));
-        androidFlavors.add(new AndroidFlavor("Candy", "Sugar free candy", R.drawable.lollipop));
-        androidFlavors.add(new AndroidFlavor("Sweets", "Checkout our mediation zone", R.drawable.marshmallow));
+        androidFlavors.add(new AndroidFlavor("Decorations", "Handmade decoration 10% off!", R.drawable.decorations));
+        androidFlavors.add(new AndroidFlavor("For Her", "Checkout our mediation zone", R.drawable.makeup));
 
         // Create an {@link AndroidFlavorAdapter}, whose data source is a list of
         // {@link AndroidFlavor}s. The adapter knows how to create list item views for each item
@@ -65,9 +65,8 @@ public class ChemistView extends AppCompatActivity {
     * Section 17. Tutorial: Miscellaneous
     */
    /* sets listener
-    * Which re
     *
-    * Does not require clickable or
+    * Does not require clickable added to xml
     */
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
