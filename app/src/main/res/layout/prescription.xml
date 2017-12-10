@@ -60,7 +60,7 @@
         android:id="@+id/tableRow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/sendOrderBtn"
+        android:layout_below="@+id/edtPhoneNum"
         android:layout_alignParentStart="true"
         android:orientation="horizontal">
 
