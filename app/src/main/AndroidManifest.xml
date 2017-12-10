@@ -43,7 +43,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"/>
         </activity>
-        <activity android:name=".PrescriptionOrder">
+        <activity android:name=".PrescriptionOrder"
+                  android:screenOrientation="portrait">
 
             <!-- This adds the Up Nav Arrow -->
             <meta-data

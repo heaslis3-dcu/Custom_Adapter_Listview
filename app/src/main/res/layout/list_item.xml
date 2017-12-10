@@ -19,18 +19,19 @@
      however settled on LinearLayout on 27/11/2017
      Removed id and clickable from LinearLayout-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center_vertical"
-    android:orientation="horizontal"
-    android:minHeight="?android:attr/listPreferredItemHeight"
-    android:padding="16dp">
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:minHeight="?android:attr/listPreferredItemHeight"
+              android:orientation="horizontal"
+              android:padding="@dimen/default_Padding">
 
     <ImageView
         android:id="@+id/list_item_icon"
         android:layout_width="50dp"
         android:layout_height="50dp"
-       />
+        />
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"

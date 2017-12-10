@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
 
     <TextView
-        style="@style/OrderPrescripTextView"
         android:id="@+id/txtViewChemList"
-        android:text="@string/chemist_list"
+        style="@style/OrderPrescripTextView"
         android:background="@color/colorTVBackground"
-        android:onClick="openChemistView"/>
+        android:onClick="openChemistView"
+        android:text="@string/chemist_list"/>
 
     <TextView
-        style="@style/OrderPrescripTextView"
         android:id="@+id/txtViewOrderPres"
-        android:text="@string/order_prescription"
+        style="@style/OrderPrescripTextView"
         android:background="@color/colorTVBackground"
-        android:onClick="openPrescriptionView"/>
+        android:onClick="openPrescriptionView"
+        android:text="@string/order_prescription"/>
 
 </LinearLayout>

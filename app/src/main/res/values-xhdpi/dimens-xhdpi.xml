@@ -18,4 +18,11 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <!--Default padding-->
+    <dimen name="default_Padding">16dp</dimen>
+    <!--Minor padding-->
+    <dimen name="minor_padding">8dp</dimen>
+    <!--text size normal-->
+    <dimen name="txtsize">16sp</dimen>
 </resources>
