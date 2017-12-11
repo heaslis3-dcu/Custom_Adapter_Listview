@@ -1,5 +1,5 @@
 # Assign3
-SDA_Assignment3
+SDA_Assignment3 2017 - Sean Heaslip
 
 /*
 * Citation
